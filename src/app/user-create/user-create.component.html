@@ -3,7 +3,12 @@
     <form (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="firstName"> First Name</label>
-            <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName">
+            <input type="text" class="form-control" id="firstName" [(ngModel)]="user.firstName" name="firstName" #firstName="ngModel" required minlength="4">
+
+            <div *ngIf="firstName.invalid && firstName.dirty" class="alert alert-danger">
+              First name is required and minimum length 4 is required.
+            </div>
+
         </div>
         <div class="form-group">
             <label for="lastName"> Last Name</label>
@@ -18,6 +23,6 @@
             <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password">
         </div>
 
-        <button class="btn btn-success mt-2" type="submit">Submit</button>
+        <button class="btn btn-success mt-2" type="submit" [disabled]="(firstName.invalid && firstName.dirty) || firstName.pristine">Submit</button>
     </form>
 </div>
