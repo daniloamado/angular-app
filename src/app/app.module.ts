@@ -8,13 +8,19 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { RoleListComponent } from './role-list/role-list.component';
+import { RoleCreateComponent } from './role-create/role-create.component';
+import { RoleUpdateComponent } from './role-update/role-update.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponent,
     UserCreateComponent,
-    UserUpdateComponent
+    UserUpdateComponent,
+    RoleListComponent,
+    RoleCreateComponent,
+    RoleUpdateComponent
   ],
   imports: [
     BrowserModule,
