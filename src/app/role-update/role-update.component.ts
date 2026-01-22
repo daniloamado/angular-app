@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Role } from '../role.model';
 import { RoleService } from '../services/role.service';
 

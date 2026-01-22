@@ -4,6 +4,8 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
 import { RoleListComponent } from './role-list/role-list.component';
+import { RoleCreateComponent } from './role-create/role-create.component';
+import { RoleUpdateComponent } from './role-update/role-update.component';
 
 const routes: Routes = [
   { path: 'users', component: UserListComponent },
