@@ -11,6 +11,8 @@ const routes: Routes = [
   { path: 'create-user', component: UserCreateComponent },
   { path: 'update-user/:id', component: UserUpdateComponent },
   { path: 'roles', component: RoleListComponent },
+  { path: 'create-role', component: RoleCreateComponent },
+  { path: 'update-role/:id', component: RoleUpdateComponent }
 ];
 
 @NgModule({
