@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RoleListComponent } from './role-list/role-list.component';
 import { RoleCreateComponent } from './role-create/role-create.component';
 import { RoleUpdateComponent } from './role-update/role-update.component';
+import { HttpConfigInterceptor } from './services/http.interceptor';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,13 @@ import { RoleUpdateComponent } from './role-update/role-update.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: HttpConfigInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
