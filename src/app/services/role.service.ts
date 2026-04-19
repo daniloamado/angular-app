@@ -8,7 +8,7 @@ import { Role } from '../role.model';
 })
 export class RoleService {
 
-  private baseUrl = "http://localhost:8080/role"
+  private baseUrl = "http://localhost:8080/role";
 
   constructor(private httpClient: HttpClient) {
 
@@ -23,7 +23,7 @@ export class RoleService {
   }
 
   getRoleById(id: number): Observable<Role>{
-    return this.httpClient.get<Role>(`${this.baseUrl}/${id}`)
+    return this.httpClient.get<Role>(`${this.baseUrl}/${id}`);
   }
 
   updateRole(id:number, role:Role): Observable<Object>{

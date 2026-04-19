@@ -8,7 +8,7 @@ import { User } from '../user.model';
 })
 export class UserService {
 
-  private basUrl = "http://localhost:8080/user"
+  private basUrl = "http://localhost:8080/user";
 
   constructor(private httpClient: HttpClient) {
 
@@ -33,4 +33,4 @@ export class UserService {
   deleteUser(id:number): Observable<Object>{
     return this.httpClient.delete(`${this.basUrl}/${id}`);
   }
-} 
+}
